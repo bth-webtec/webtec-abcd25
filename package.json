@@ -1,0 +1,21 @@
+{
+  "name": "webtec-abcd25",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bth-webtec/webtec-abcd25.git"
+  },
+  "keywords": [],
+  "author": "Mikael Roos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bth-webtec/webtec-abcd25/issues"
+  },
+  "homepage": "https://github.com/bth-webtec/webtec-abcd25#readme"
+}
