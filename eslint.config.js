@@ -1,8 +1,8 @@
-import js from "@eslint/js";
-import globals from "globals";
-import json from "@eslint/json";
-import css from "@eslint/css";
-import { defineConfig } from "eslint/config";
+import js from "@eslint/js"
+import globals from "globals"
+import json from "@eslint/json"
+import css from "@eslint/css"
+import { defineConfig } from "eslint/config"
 
 export default defineConfig([
   {
@@ -10,6 +10,12 @@ export default defineConfig([
     plugins: { js },
     extends: ["js/recommended"],
     languageOptions: { globals: { ...globals.browser, ...globals.node } },
+    rules: {
+      'no-unused-vars': 'warn',
+      'no-console': 'off',
+      semi: ['error', 'never'],
+      indent: ['error', 2]
+    }
   },
   {
     files: ["**/*.json"],
@@ -23,7 +29,7 @@ export default defineConfig([
     language: "css/css",
     extends: ["css/recommended"],
   },
-	{
-		ignores: ["package-lock.json"],
-	},
-]);
+  {
+    ignores: ["package-lock.json"],
+  },
+])
