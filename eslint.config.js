@@ -28,6 +28,10 @@ export default defineConfig([
     plugins: { css },
     language: "css/css",
     extends: ["css/recommended"],
+    rules: {
+      // allow unknown CSS-variables (var(--...)) defined in other files
+      "css/no-invalid-properties": ["error", { allowUnknownVariables: true }]
+    },
   },
   {
     ignores: ["package-lock.json"],
