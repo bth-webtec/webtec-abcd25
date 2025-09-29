@@ -30,7 +30,8 @@ export default defineConfig([
     extends: ["css/recommended"],
     rules: {
       // allow unknown CSS-variables (var(--...)) defined in other files
-      "css/no-invalid-properties": ["error", { allowUnknownVariables: true }]
+      "css/no-invalid-properties": ["error", { allowUnknownVariables: true }],
+      "css/use-baseline": ["error", { available: "newly" }],
     },
   },
   {
