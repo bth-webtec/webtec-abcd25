@@ -1,5 +1,7 @@
 # webtec-abcd25
 
+[![Check kmom](https://github.com/bth-webtec/webtec-abcd25/actions/workflows/check.yml/badge.svg)](https://github.com/bth-webtec/webtec-abcd25/actions/workflows/check.yml)
+
 Nu är mitt kursrepo uppdaterat med utvecklingsmiljön så att jag kan komma igång med kmom01.
 
 ## Krav
