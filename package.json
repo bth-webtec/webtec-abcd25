@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "lint": "eslint .",
+    "check": "webtec check",
     "server": "http-server",
     "clean": "rm -rf node_modules"
   },
@@ -21,6 +22,7 @@
   },
   "homepage": "https://github.com/bth-webtec/webtec-abcd25#readme",
   "devDependencies": {
+    "@dbwebb/webtec": "^2.0.1",
     "@eslint/css": "^0.10.0",
     "@eslint/js": "^9.29.0",
     "@eslint/json": "^2.0.0",

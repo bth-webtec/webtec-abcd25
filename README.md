@@ -24,5 +24,6 @@ Repot innehåller rekommenderade VS Code-extensions i `.vscode/extensions.json`.
 |----------|-------------|
 | `npm install` | Installera utvecklingsverktygen |
 | `npm run lint` | Kör lintverktyget på koden |
+| `npm run check kmom01` | Kontrollera att kmom01 är korrekt (även kmom02–kmom10) |
 | `npm run server` | Starta en lokal webbserver |
 | `npm run clean` | Ta bort node_modules |
