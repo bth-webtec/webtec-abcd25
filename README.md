@@ -32,6 +32,8 @@ Kommandot läser `package.json` och laddar ned alla verktyg som listas under `de
 
 ## Kommandon
 
+Repot innehåller ett antal skript definierade i `package.json`. Du kör dem med `npm run <skript>`. Kör `npm run` utan argument för att se alla tillgängliga skript.
+
 | Kommando | Beskrivning |
 |----------|-------------|
 | `npm install` | Installera utvecklingsverktygen (kör en gång efter kloning) |
