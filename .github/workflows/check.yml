@@ -4,6 +4,11 @@ on:
   push:
     tags:
       - 'v[0-9]*'
+  pull_request:
+    branches:
+      - 'bth/submit/kmom03'
+      - 'bth/submit/kmom06'
+      - 'bth/submit/kmom10'
 
 jobs:
   check:
@@ -21,23 +26,28 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Determine kmom from tag
+      - name: Determine kmom
         id: kmom
         run: |
-          TAG="${GITHUB_REF#refs/tags/}"
-          MAJOR=$(echo "$TAG" | sed 's/v\([0-9]*\)\..*/\1/')
-          case $MAJOR in
-            1) KMOM="kmom01" ;;
-            2) KMOM="kmom02" ;;
-            3) KMOM="kmom03" ;;
-            4) KMOM="kmom04" ;;
-            5) KMOM="kmom05" ;;
-            6) KMOM="kmom06" ;;
-            7) KMOM="kmom10" ;;
-            *) echo "Okänd version: $TAG"; exit 1 ;;
-          esac
+          if [[ "$GITHUB_EVENT_NAME" == "pull_request" ]]; then
+            KMOM=$(echo "$GITHUB_BASE_REF" | sed 's|bth/submit/||')
+            echo "Kör check för $KMOM (PR mot $GITHUB_BASE_REF)"
+          else
+            TAG="${GITHUB_REF#refs/tags/}"
+            MAJOR=$(echo "$TAG" | sed 's/v\([0-9]*\)\..*/\1/')
+            case $MAJOR in
+              1) KMOM="kmom01" ;;
+              2) KMOM="kmom02" ;;
+              3) KMOM="kmom03" ;;
+              4) KMOM="kmom04" ;;
+              5) KMOM="kmom05" ;;
+              6) KMOM="kmom06" ;;
+              7) KMOM="kmom10" ;;
+              *) echo "Okänd version: $TAG"; exit 1 ;;
+            esac
+            echo "Kör check för $KMOM (tagg: $TAG)"
+          fi
           echo "kmom=$KMOM" >> "$GITHUB_OUTPUT"
-          echo "Kör check för $KMOM (tagg: $TAG)"
 
       - name: Run check
         run: npm run check ${{ steps.kmom.outputs.kmom }}
