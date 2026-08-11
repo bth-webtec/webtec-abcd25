@@ -38,6 +38,7 @@ Repot innehåller ett antal skript definierade i `package.json`. Du kör dem med
 |----------|-------------|
 | `npm install` | Installera utvecklingsverktygen (kör en gång efter kloning) |
 | `npm run lint` | Kör lintverktyget på koden |
+| `npm run lint:fix` | Kör lintverktyget och rätta de fel som går att rätta automatiskt |
 | `npm run check kmom01` | Kontrollera att kmom01 är korrekt (även kmom02–kmom10) |
 | `npm run server` | Starta en lokal webbserver |
 | `npm run clean` | Ta bort node_modules |
