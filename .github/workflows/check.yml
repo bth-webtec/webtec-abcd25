@@ -10,6 +10,11 @@ on:
       - 'bth/submit/kmom06'
       - 'bth/submit/kmom10'
 
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -50,4 +55,47 @@ jobs:
           echo "kmom=$KMOM" >> "$GITHUB_OUTPUT"
 
       - name: Run check
-        run: npm run check ${{ steps.kmom.outputs.kmom }}
+        id: check
+        run: |
+          set +e
+          npm run check "${{ steps.kmom.outputs.kmom }}" 2>&1 | tee check-output.txt
+          exit_code=${PIPESTATUS[0]}
+          echo "exit_code=$exit_code" >> "$GITHUB_OUTPUT"
+          exit "$exit_code"
+
+      - name: Build PR comment body
+        if: always() && github.event_name == 'pull_request'
+        run: |
+          if [ "${{ steps.check.outputs.exit_code }}" = "0" ]; then
+            echo "### ✅ Check ${{ steps.kmom.outputs.kmom }} passerade" > check-comment.md
+          else
+            echo "### 🚫 Check ${{ steps.kmom.outputs.kmom }} misslyckades" > check-comment.md
+          fi
+          {
+            echo
+            echo '```text'
+            cat check-output.txt
+            echo '```'
+          } >> check-comment.md
+
+      - name: Post result as PR comment
+        if: always() && github.event_name == 'pull_request'
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: webtec-check
+          path: check-comment.md
+
+      - name: Set CI status label
+        if: always() && github.event_name == 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create "passed-ci" --color 0E8A16 --description "Senaste check-körningen passerade" --force
+          gh label create "failed-ci" --color B60205 --description "Senaste check-körningen misslyckades" --force
+
+          PR="${{ github.event.pull_request.number }}"
+          if [ "${{ steps.check.outputs.exit_code }}" = "0" ]; then
+            gh pr edit "$PR" --add-label "passed-ci" --remove-label "failed-ci"
+          else
+            gh pr edit "$PR" --add-label "failed-ci" --remove-label "passed-ci"
+          fi
