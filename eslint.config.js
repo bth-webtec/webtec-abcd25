@@ -35,6 +35,8 @@ export default defineConfig([
     },
   },
   {
-    ignores: ["package-lock.json"],
+    // package-lock.json is auto-generated; .dbw.js is a downloaded course
+    // test-harness file, not code written by the student.
+    ignores: ["package-lock.json", "**/.dbw.js"],
   },
 ])
