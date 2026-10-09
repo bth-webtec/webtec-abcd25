@@ -5,7 +5,7 @@
     background-color: #c0c0c0;      /* Dark gray-green background */
     color: #f9f9f9;                 /* Light/white text */
     padding: 1.5rem 1rem;             /* Reduce padding for a shorter footer */
-    font-family: 'Arial', sans-serif; /* Font for footer text */
+    font-family: sans-serif; /* Font for footer text */
   }
   
   /* Triptych layout */

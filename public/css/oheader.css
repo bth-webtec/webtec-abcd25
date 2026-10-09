@@ -57,7 +57,7 @@
   justify-content: space-between; 
   align-items: center;         
   padding: 2rem;             /* Add spacing inside the header (1rem top/bottom, 2rem left/right) */
-  background-color: #eaf5ea;    /* Set a light green background color */
+  background-color: #eaf5ea;    
   border-bottom: 2px solid #cba1a1;   /* Add a forest green border at the bottom */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);   /* Apply a subtle shadow for a slight 3D effect */
+  box-shadow: 0 2px 4px rgba(121, 79, 79, 0.1);   /* Apply a subtle shadow for a slight 3D effect */
 }

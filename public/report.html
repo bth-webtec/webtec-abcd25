@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive-design.css">
     <title>En sida om mig | Kursen webtec</title>
     <meta name="description" content="Min webbsida i kursen webtec">
     <link rel="shortcut icon" href="favicon.ico"/>
@@ -17,7 +18,10 @@
             <span>Kursen webtec</span>
         </a>
     
-    <nav>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Öppna meny">&#9776;</button>
+ 
+
+    <nav id="nav-links">
       <ul>
         <li><a href="me.html">Me</a></li>
         <li><a href="report.html">Redovisa</a></li>
@@ -28,44 +32,48 @@
   </header>
 
       <div class="wrap">
+        <main class="main">
+          <article class="article">
+
+            <h1>Redovisning</h1>
+          
+            <p>Här kommer mina redovisningstexter från de olika kursmomenten i denna kursen.</p>
+          
+            <section id="kmom01">
+              <h2>kmom01</h2>
+          
+              <p>Här kommer redovisningstexten för detta kursmoment.</p>
+            </section>
+          
+            <section id="kmom02">
+              <h2>kmom02</h2>
+          
+              <p>Här kommer redovisningstexten för detta kursmoment.</p>
+            </section>
+          
+            <section id="kmom03">
+              <h2>kmom03</h2>
+          
+              <p>Här kommer redovisningstexten för detta kursmoment.</p>
+            </section>
+          
+      </article>
+      </main>
+  
+      
         <aside class="aside">
           <h2>Innehållsförteckning</h2>
         
+
+      
           <ul>
             <li><a href="#kmom01">kmom01</a></li>
             <li><a href="#kmom02">kmom02</a></li>
             <li><a href="#kmom03">kmom03</a></li>
           </ul>
         </aside>
-  
-      
-          <article class="article">
-
-              <h1>Redovisning</h1>
-            
-              <p>Här kommer mina redovisningstexter från de olika kursmomenten i denna kursen.</p>
-            
-              <section id="kmom01">
-                <h2>kmom01</h2>
-            
-                <p>Här kommer redovisningstexten för detta kursmoment.</p>
-              </section>
-            
-              <section id="kmom02">
-                <h2>kmom02</h2>
-            
-                <p>Här kommer redovisningstexten för detta kursmoment.</p>
-              </section>
-            
-              <section id="kmom03">
-                <h2>kmom03</h2>
-            
-                <p>Här kommer redovisningstexten för detta kursmoment.</p>
-              </section>
-            
-        </article>
+          
       </div>  
-    </main>
  
            
 
@@ -105,7 +113,7 @@
   
   </footer>
 
-  <script type="module" src="js/hello.js"></script>
+  <script type="module" src="js/responsive-design.js"></script>
 
 
 </body>

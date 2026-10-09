@@ -13,7 +13,7 @@
 
 .figure figcaption {
   font-size: 0.9rem;  /* Smaller font for captions */
-  color: #777;        /* Lighter gray for less emphasis */
+  color: #000000;        /* Lighter gray for less emphasis */
   text-align: center; /* Centers the caption below the image */
   margin-top: 0.10rem; /* Space above the caption */
 }

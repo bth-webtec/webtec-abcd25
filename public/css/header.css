@@ -12,17 +12,18 @@
 /* Styling for navigation links */
 .siteheader nav a {
   text-decoration: none;  /* Remove the default underline from links */
-  color: #006400;       /* Set a dark green color for the navigation links */
+  color: #1d3d1dfe;       /* Set a dark green color for the navigation links */
   font-size: 1rem;        /* Define the font size for the links */
   font-weight: bold;      /* Make the text bold for better readability */
   border-bottom: 2px solid transparent; /* Reserve space for the hover underline so nothing jumps */
   transition: color 0.3s, border-bottom-color 0.3s; /* Add a smooth transition for color and border changes on hover */
 }
 
+
 /* Hover effect for navigation links */
 .siteheader nav a:hover {
-  color: #1f6f46;                         /* Darker forest green: passes WCAG AA (4.5:1) text contrast on the light green header background */
-  border-bottom-color: #7fafe3;           /* Reveal the forest green underline when hovered */
+  color: #552fbe;                         /* Darker forest green: passes WCAG AA (4.5:1) text contrast on the light green header background */
+  border-bottom-color: #afcae8;           /* Reveal the forest green underline when hovered */
 }
 
 
@@ -36,8 +37,8 @@
 .siteheader span {
   font-size: 1.5rem;  /* Define the font size for the header text */
   font-weight: bold;  /* Make the header text bold for emphasis */
-  color: #2e8b57;   /* Apply a forest green color to the header text */
-  font-family: 'Arial', sans-serif; /* Use Arial font, fallback to sans-serif */
+  color: #1d3d1dfe;   /* Apply a forest green color to the header text */
+  font-family: 'Times New Roman', Times, serif; /* Use Arial font, fallback to sans-serif */
 }
 
 
@@ -57,8 +58,8 @@
   align-items: center;            /* Vertically align items to the center */
   padding: 1rem 2rem;             /* Add spacing inside the header (1rem top/bottom, 2rem left/right) */
   background-color: #eaf5ea;    /* Set a light green background color */
-  border-bottom: 2px solid #2e8b57;   /* Add a forest green border at the bottom */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);   /* Apply a subtle shadow for a slight 3D effect */
+  border-bottom: 2px solid #ffffff;   /* Add a forest green border at the bottom */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.698);   /* Apply a subtle shadow for a slight 3D effect */
 }
 
 /**
@@ -75,7 +76,7 @@
  */
 .article h1 {
   font-size: 1.8rem;  /* Larger font size for the title */
-  color: #333;        /* Darker color for contrast */
+  color: #fffffffe;        /* Darker color for contrast */
   margin: 0;          /* Removes default margin */
 }
 
@@ -84,6 +85,6 @@
  */
 .article .author {
   font-size: 0.9rem;  /* Smaller font size for secondary information */
-  color: #555;        /* Gray color for subtlety */
+  color:#ffefeffe;        /* Gray color for subtlety */
   margin-top: 0.5rem; /* Space above the author line */
 }
