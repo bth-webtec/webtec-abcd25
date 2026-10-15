@@ -2,7 +2,6 @@
  * General styles for the article.
  */
  .article {
-  background-color: 2e432b; /* Light background for better readability */
   border: 1px solid #ffffff;      /* Subtle border to separate it from other content */
   border-radius: 8px;          /* Rounded corners for a modern look */
   padding: 1.5rem;             /* Space around the content */
