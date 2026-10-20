@@ -3,101 +3,84 @@
 @import url("ofooter.css");
 @import url("responsive-navbar.css");
 
-
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 10rem;
+  padding: 2rem;
+  box-sizing: border-box;
+  text-align: center;
+}
 
 .row {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .row.color1 {
-  background-color: #cba1a1;;
+  background-color: #a54c4c;
+
 }
+
+.row.color2 {
+  background-color: #ffffff;
+}
+
+
 
 .row.cols1 .col {
   flex: 1 1 100%;
 }
 
 .row.cols2 .col {
-  flex: 1 1 50%;
+  flex: 1 1 calc(50% - 1rem);
 }
 
 .row.cols3 .col {
-  flex: 1 1 33.333%;
+  flex: 1 1 calc(33.333% - 1rem);
 }
 
-.col {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 10rem;
-}
+
 
 
 .background {
-  min-height: 20rem;
-  background-image: url('../img/dofft.jpg');
+  min-height: 40rem;
+  background-image: url('../img/love.jpg');
   background-size: cover;
   background-position: center;
-  border-radius: 20px;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+  color: #ffffff;
+  text-align: justify;
+  font-size: xx-large;
+  
 }
 
 .navbar {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 15px 30px;
   position: sticky;
 }
 
-.nav-links {
-  display: none;                 /* Hide links by default */
-  flex-direction: column;        /* Stack links vertically */
-  position: absolute;            /* Position relative to navbar */
-  top: 50px;                     /* Place below header */
-  right: 0;
-  background-color: #ffffff;
-  width: 150px;
-  padding: 10px;
-
+#dofter {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-.nav-links li {
-  margin-left: 20px;               /* Space between links */
-}
-
-.nav-links a {
-  text-decoration: none;           /* Remove underline */
-  color: white;                    /* White text for links */
+#dofter .col {
+  flex: 1 1 0;
+  min-width: 200px;
 }
 
 
-    /* Show menu when 'show' class is added by JS */
-    .nav-links.show {
-      display:none;
- }
 
 
-
-/* Hamburger menu button */
-.menu-toggle {
-  display: none;                   /* Hidden by default */
-  background: none;                /* No background */
-  border: none;                    /* No border */
-  font-size: 1.8em;                /* Bigger font for hamburger icon */
-  color: rgb(0, 0, 0);                    /* White color */
-  cursor: pointer;                 /* Pointer cursor on hover */
-}
-
-/* Responsive styles: when screen is smaller than 600px */
-@media (max-width: 600px) {
-
-  .menu-toggle {
-    display: block;                /* Show hamburger button on small screens */
-
-  }
-}
 
 
 
