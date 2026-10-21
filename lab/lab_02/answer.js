@@ -31,11 +31,11 @@ export function isPositiveNegative (value) {
   // TODO: Write your code here.
   if (value > 0) {
     return "Positive"
-} else if (value < 0) {
-  return "Negative"
-} else {
-  return "Neither"
-}
+  } else if (value < 0) {
+    return "Negative"
+  } else {
+    return "Neither"
+  }
 }
 
 
@@ -51,8 +51,8 @@ export function isOddEven (value) {
   if (value % 2 === 0) {
     return "Even"
   } else {
-  return "Odd"
-}
+    return "Odd"
+  }
 }
 
 
@@ -70,11 +70,11 @@ export function blackJack (value1, value2, value3) {
   
   if (sum === 21) {
     return "Black Jack"
-} else if (sum > 21) {
-  return "Busted"
-} else {
-  return "Draw"
-}
+  } else if (sum > 21) {
+    return "Busted"
+  } else {
+    return "Draw"
+  }
 }
 
 
@@ -93,13 +93,13 @@ export function gradeChecker (score) {
   // TODO: Write your code here.
   if (score >= 90) {
     return "A"
-} else if (score >= 80){
-  return "B"
-}else if (score >= 70){
-  return "C"
-} else {
-  return "F"
-}
+  } else if (score >= 80){
+    return "B"
+  }else if (score >= 70){
+    return "C"
+  } else {
+    return "F"
+  }
 }
 
 
@@ -118,11 +118,11 @@ export function temperature (temp) {
   // TODO: Write your code here.
   if (temp < 10){
     return "Cold"
-}else if (temp <= 25){
-  return "Warm"
-} else {
-  return "Hot"
-}
+  }else if (temp <= 25){
+    return "Warm"
+  } else {
+    return "Hot"
+  }
 }
 
 
@@ -142,14 +142,14 @@ export function temperature (temp) {
 export function trafficlight (color) {
   // TODO: Write your code here.
   switch (color.toLowerCase()) {
-    case "red":
-      return "Stop"
-    case "yellow":
-      return "Wait"
-    case "green":
-      return "Go"
-      default:
-        return "Invalid color"
+  case "red":
+    return "Stop"
+  case "yellow":
+    return "Wait"
+  case "green":
+    return "Go"
+  default:
+    return "Invalid color"
       
   }
 }
@@ -189,13 +189,13 @@ export function fizzBuzz (value) {
 
   if (value % 3 === 0 && value % 5 === 0){
     return "FizzBuzz"
-}else if (value % 3 === 0) {
-  return "Fizz"
-} else if (value % 5 === 0) {
-  return "Buzz"
-} else {
-  return value
-}
+  }else if (value % 3 === 0) {
+    return "Fizz"
+  } else if (value % 5 === 0) {
+    return "Buzz"
+  } else {
+    return value
+  }
 }
 
 
@@ -215,14 +215,14 @@ export function fizzBuzz (value) {
 export function trafficlightSwitch (color) {
   // TODO: Write your code here.
   switch (color.toLowerCase()) {
-    case "red":
-      return "Stop"
-    case "yellow":
-      return "Wait"
-    case "green":
-      return "Go"
-      default:
-        return "Invalid color"
+  case "red":
+    return "Stop"
+  case "yellow":
+    return "Wait"
+  case "green":
+    return "Go"
+  default:
+    return "Invalid color"
       
   }
 
@@ -243,24 +243,24 @@ export function trafficlightSwitch (color) {
 export function calculator (value1, value2, op, reverse=false) {
   // TODO: Write your code here.
 
-if (reverse) {
-  const temp = value1
-  value1 = value2
-  value2 = temp 
-}
+  if (reverse) {
+    const temp = value1
+    value1 = value2
+    value2 = temp 
+  }
 
-switch (op){
+  switch (op){
   case"+":
-   return value1 + value2
-   case"-":
-   return value1 - value2
-   case"*":
-   return value1 * value2
-   case"/":
-   return value1 / value2
-   case"%":
-   return value1 % value2
-default:
-  return -1
-}
+    return value1 + value2
+  case"-":
+    return value1 - value2
+  case"*":
+    return value1 * value2
+  case"/":
+    return value1 / value2
+  case"%":
+    return value1 % value2
+  default:
+    return -1
+  }
 }

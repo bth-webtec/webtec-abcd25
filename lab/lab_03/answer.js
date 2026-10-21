@@ -107,8 +107,8 @@ export function oddString (start, stop) {
     if (i % 2 !== 0) {
       result.push(i)
     }
-    }
-    return result.join(', ')
+  }
+  return result.join(', ')
 }
 
 

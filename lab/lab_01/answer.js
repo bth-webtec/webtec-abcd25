@@ -34,7 +34,7 @@ export function stringNumber (value) {
  * @returns {number} The length of the string.
  */
 export function stringLength (word) {
- return word.length // TODO: Write your code here.
+  return word.length // TODO: Write your code here.
 }
 
 
@@ -47,7 +47,7 @@ export function stringLength (word) {
  * @returns {number} The product.
  */
 export function product (value1, value2) {
- return value1 * value2 // TODO: Write your code here.
+  return value1 * value2 // TODO: Write your code here.
 }
 
 
@@ -193,5 +193,5 @@ export function substring (word) {
  * @returns {boolean} If the incoming string includes the letter "a", return true, eler false.
  */
 export function wordIncludes (word) {
- return word.includes("a") // TODO: Write your code here.
+  return word.includes("a") // TODO: Write your code here.
 }
